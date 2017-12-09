@@ -1,9 +1,7 @@
 html{
-    background: url(../sources/energy-sun-3.jpg) top;
+    background: url(../images/energy-sun-3.jpg) fixed no-repeat;
     background-color: #160002;
     background-size: contain;
-    background-repeat: no-repeat;
-    /* height: 100%; */
 }
 html, body{
     margin:0;
@@ -26,7 +24,11 @@ h1{
     margin-top: 78px;
 }
 article{
-    margin-top: calc(44% - 120px);
+    box-shadow: 0 0 13px 0px rgba(22,0,2,0.33);
+    border-radius: 12px;
+    margin: calc(44% - 138px) -48px auto;
+    background: rgba(22, 0, 2, 0.5);
+    padding: 12px 48px;
 }
 iframe{
     max-width: 100%;
