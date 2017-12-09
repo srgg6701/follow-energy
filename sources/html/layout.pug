@@ -1,0 +1,28 @@
+include ./mixins
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Energy
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='css/css.css')
+    script(src='js/jquery.min.js')
+  - var data = [{ "#.html": "What is energy indeed?" }, { "#.html": "How it will change my life?" }, { "#.html": "Why you cannot to obtain it and if it possible at all?" }, { "#.html": "Where does it reside and how to retrieve it?" }, { "#.html": "How to feel it?" }]
+  body
+    main
+      header
+        h1
+          div All you need
+          div is Energy
+        #hamburger
+        +menu(data)
+      article
+        h2 
+            block header
+        block contents
+        +menu(data)
+        br
+        block media
+    script(src="js/app.js")

@@ -1,0 +1,8 @@
+mixin youtube(link)
+    iframe(width='900', height='506', src='https://www.youtube.com/embed/' + link, frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+mixin menu(data)
+    ul.menu
+        each link in data
+            li
+                each text, lnk in link
+                    a(href=lnk + '.html') #{text}
