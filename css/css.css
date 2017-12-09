@@ -30,6 +30,9 @@ h1{
     letter-spacing: 2px;
     line-height: 1.6;
 }
+h2{
+    margin-bottom: 32px;
+}
 header{
     margin-top: 78px;
     position: relative;
@@ -95,4 +98,13 @@ header ul.menu li:hover{
 header ul.menu a{
     border-bottom:none;
     color: #fbf6f2;
+}
+/* classes */
+.slim{
+    font-weight: 300;
+}
+
+h2 .slim{
+    line-height: 1.5;
+    opacity: 0.65;
 }
