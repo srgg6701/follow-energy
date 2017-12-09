@@ -1,0 +1,9 @@
+extends ../components/layout
+block vars
+    - var title = 'TITLE'
+block header
+    |#{title}
+block contents
+    p CONTENT
+block media
+    +youtube('LINK')

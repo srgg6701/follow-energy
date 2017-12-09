@@ -1,0 +1,9 @@
+extends ../components/layout
+block vars
+    - var title = 'What is *energy*?'
+block header
+    |#{title}
+block contents
+    p Some contents comes here
+block media
+    +youtube('LINK')
