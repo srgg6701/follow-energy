@@ -6,3 +6,7 @@ mixin menu(data)
             li
                 each text, lnk in link
                     a(href=lnk + '.html') #{text}
+mixin extPages(tag)
+    #{tag}
+        each lnk, text in { 'A Beauty of infinite Life':'beauty-of-infinite-life', 'Extasy':'extasy', 'Sex':'sex', 'True Romance':'true-romance', 'Empathy':'empathy', 'Heroism':'heroism', 'Awakening':'awakening' }
+            a(href=lnk + '.html') #{text}
