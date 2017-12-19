@@ -57,7 +57,7 @@ header {
 article {
     box-shadow: 0 0 13px 0px rgba(22,0,2,0.33);
     border-radius: 12px;
-    margin: calc(44% - 195px) -48px auto;
+    margin: calc(44% - 156px) -48px auto;
     background: rgba(22, 0, 2, 0.5);
     padding: 12px 48px;
 }
