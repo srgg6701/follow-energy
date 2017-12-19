@@ -113,6 +113,9 @@ p:hover {
 }
 
 /**/
+article > h2{
+    font-weight: normal;
+}
 article p,
 article li{
     text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8);
