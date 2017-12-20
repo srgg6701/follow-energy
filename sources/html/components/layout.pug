@@ -11,7 +11,7 @@ html(lang='en')
     link(rel='stylesheet', href='css/css.css')
     script(src='js/jquery.min.js')
   - var data = [{ "what-is-energy": "What is energy indeed?" }, { "how-it-will-change-my-life": "How it will change my life?" }, { "why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all": "Why you cannot obtain it right now and if it possible at all?" }, { "where-does-it-reside-and-how-to-retrieve-it": "Where does it reside and how to retrieve it?" }, { "how-to-feel-it": "How to feel it?" }]
-  body
+  body(class=body_class)
     main
       header
         #second-menu
@@ -23,11 +23,13 @@ html(lang='en')
         #hamburger
         +menu(data)
       article
-        h2 
-            block header
-        block contents
-        +menu(data)
-        br
-        block media
+        section
+          h2 
+              block header
+          block contents
+          +menu(data)
+          br
+          block media
     +extPages('footer')
+    #page-background
     script(src="js/app.js")

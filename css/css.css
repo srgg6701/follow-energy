@@ -1,10 +1,6 @@
-html {
-    background: url(../images/energy-sun-3.jpg) fixed no-repeat;
+html{
     background-color: #160002;
-    background-position: center top;
-    background-size: contain;
 }
-
 html, body {
     margin: 0;
     padding: 0;
@@ -29,6 +25,13 @@ a:hover {
     border-bottom-style: dotted;
 }
 
+article {
+    /* box-shadow: 0 0 13px 0px rgba(22,0,2,0.33); */
+    /* border-radius: 12px; */
+    /* background: rgba(22, 0, 2, 0.5); */
+    /* padding: 12px 48px; */
+}
+
 footer{
     column-count: 3;
     margin-bottom: 20px;
@@ -50,17 +53,14 @@ h2 {
 }
 
 header {
-    margin-top: 78px;
+    /* margin: auto; */
+    height: 0;
+    /* height: 51%; */
+    padding-bottom: 16%;
+    padding-top: 16%;
     position: relative;
 }
 
-article {
-    box-shadow: 0 0 13px 0px rgba(22,0,2,0.33);
-    border-radius: 12px;
-    margin: calc(44% - 156px) -48px auto;
-    background: rgba(22, 0, 2, 0.5);
-    padding: 12px 48px;
-}
 
 iframe {
     max-width: 100%;
@@ -71,10 +71,12 @@ li {
     list-style: none;
 }
 
-main, footer {
+article, footer, header{
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
+    /* overflow: hidden; */
+    position: relative;
     width: 80%;
 }
 
@@ -86,18 +88,33 @@ p:hover {
 
 #hamburger {
     background-image: linear-gradient(to right, rgb(251, 246, 242), transparent);
-    bottom: -40px;
+    /* bottom: -40px; */
     display: inline-block;
     height: 32px;
+    /* margin-top: -36px; */
     opacity: 0.65;
-    position: absolute;
+    /* position: absolute; */
     transition: all ease 0.3s;
+    transform: translateY(-27px);
     width: 40px;
 }
 
 #hamburger:hover {
     cursor: pointer;
     opacity: 1;
+}
+
+#page-background{
+    background: url(../images/energy-sun-3.jpg) fixed no-repeat;
+    background-position: center top;
+    background-size: contain;
+    height: 0;
+    padding-bottom: 30%;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index: -1;
 }
 
 #second-menu{
@@ -113,12 +130,20 @@ p:hover {
 }
 
 /**/
-article > h2{
+article h2{
     font-weight: normal;
 }
 article p,
 article li{
     text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8);
+}
+article section{
+    box-shadow: 0 0 13px 0px rgba(22,0,2,0.33);
+    border-radius: 12px;
+    background: rgba(22, 0, 2, 0.5);
+    padding: 12px 48px;
+    margin-left: -48px;
+    margin-right: -48px;
 }
 footer a,
 header section a{
@@ -132,23 +157,36 @@ header section a:hover{
     color: #ead9bd;
     opacity: 1;
 }
-header section a:hover{
-    text-decoration: underline;
-}
 
 h1 a div {
     color: #fbf6f2;
     text-shadow: 1px 1px 14px rgba(255,255,255,0.35), -1px -1px 14px rgba(255,255,255,0.35), -1px 1px 14px rgba(255,255,255,0.35), 1px -1px 14px rgba(255,255,255,0.35);
 }
 
+header h1{
+    position: absolute;
+    transform: translateY(-140%);
+    margin: 0;
+}
+
+header section a:hover{
+    text-decoration: underline;
+}
+
 header ul.menu {
-    float: left;
+    background: rgba(255,255,255,0.5);
+    /* float: left; */
     display: none;
     max-width: 40%;
+    padding: 10px 14px;
     position: relative;
     top: -34px;
     left: 52px;
     list-style: square;
+    /* position: absolute; */
+    /* top: 37%; */
+    transform: translateY(-63px);
+    z-index: 1;
 }
 
 ul.menu{
