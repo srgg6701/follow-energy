@@ -1,7 +1,3 @@
-html {
-    background-color: #160002;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -12,6 +8,7 @@ body * {
 }
 
 body {
+    background-color: #160002;
     font: 16px/1.9 Verdana, Tahoma, Arial, serif;
     color: #ead9bd;
 }
@@ -124,7 +121,6 @@ p:hover {
     width: 32px;
 }
 #hamburger:before{
-    /* outline: solid 1px; */
     background-image: radial-gradient(rgba(69, 22, 2, 0.75) 34%, transparent 70%);
     border-radius: 50%;
     content: "";
@@ -133,6 +129,16 @@ p:hover {
     width: 40px;
     transform: translate(-7px, -3px);
 }
+
+.what-is-energy #hamburger:before{
+	background-image: radial-gradient(rgba(1, 4, 21, 0.75) 34%, transparent 70%);
+}
+
+.how-to-feel-it #hamburger:before,
+.where-does-it-reside-and-how-to-retrieve-it #hamburger:before{
+	background-image: radial-gradient(rgba(0, 0, 0, 0.75) 34%, transparent 70%);
+}
+
 #hamburger:hover {
     cursor: pointer;
     opacity: 1;
@@ -162,17 +168,41 @@ p:hover {
     left: 0;    
     z-index: -1;
 }
+.what-is-energy {
+    background-image: linear-gradient(to right, #0d1023, #051d39);
+}
 .what-is-energy #page-background {
     background-image: url(../images/what-is-energy.jpg);
 }
+
+.why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all{
+    background-color: rgb(20, 17, 12);
+}
+
 .why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all #page-background {
     background-image: url(../images/why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all.jpg);
 }
+
+.how-it-will-change-my-life{
+    background-color: rgb(12, 7, 3);
+}
+.how-it-will-change-my-life main{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) -12%, #350b07 5%, transparent 18%);
+}
+
+.how-it-will-change-my-life header ul.menu{
+    background: rgba(0,0,0,0.75);
+}
+
 .how-it-will-change-my-life #page-background {
-    background-image: url(../images/how-it-will-change-my-life-1.jpg);
+    background-image: url(../images/how-it-will-change-my-life.jpg);
 }
 .where-does-it-reside-and-how-to-retrieve-it #page-background {
     background-image: url(../images/where-does-it-reside-and-how-to-retrieve-it.jpg);
+}
+.how-to-feel-it,
+.where-does-it-reside-and-how-to-retrieve-it {
+    background-color: #000;
 }
 .how-to-feel-it #page-background {
     background-image: url(../images/how-to-feel-it.jpg);
@@ -227,6 +257,26 @@ article section {
     padding: 12px 48px;
 }
 
+.what-is-energy article section {
+    box-shadow: 0 0 13px 0px rgba(1, 4, 21, 0.33);
+    background: rgba(1, 4, 21, 0.5);
+}
+
+.why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all article section {
+    box-shadow: 0 0 13px 0px rgba(19, 21, 13, 0.33);
+    background: rgba(19, 21, 13, 0.5);
+}
+
+.how-it-will-change-my-life article section {
+    box-shadow: 0 0 13px 0px rgba(12, 7, 3, 0.33);
+    background: rgba(12, 7, 3, 0.5);
+}
+.how-to-feel-it article section,
+.where-does-it-reside-and-how-to-retrieve-it article section{
+    box-shadow: 0 0 13px 0px rgba(0,0,0,0.33);
+    background: rgba(0, 0, 0, 0.5);
+}
+
 footer a, header section a {
     float: left;
     clear: left;
@@ -272,7 +322,7 @@ header section {
 
 header ul.menu {
     background: rgba(255,255,255,0.15);
-    background: rgba(0,0,0,0.5);
+    /* background: rgba(0,0,0,0.5); */
     display: none;
     float: left;
     margin-bottom: -80px;
