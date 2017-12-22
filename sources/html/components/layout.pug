@@ -14,14 +14,15 @@ html(lang='en')
   body(class=body_class)
     main
       header
-        #second-menu
-          +extPages('section')
-        h1
-          a(href="index.html", title="Go to Homepage")
-            div All you need
-            div is Energy
-        #hamburger
-        +menu(data)
+        section
+          #second-menu
+            +extPages('section')
+          h1
+            a(href="index.html", title="Go to Homepage")
+              div All you need
+              div is Energy
+          #hamburger
+          +menu(data)
       article
         section
           h2 

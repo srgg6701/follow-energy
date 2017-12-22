@@ -66,10 +66,10 @@ h2 {
 }
 
 header {
+    /* display: flex; */
     height: 0;
     padding-bottom: 25%;
     padding-top: 25%;
-    position: relative;
 }
 
 @media screen and (min-width: 600px) {
@@ -113,12 +113,13 @@ p:hover {
 #hamburger {
     background-image: linear-gradient(to left, rgb(251, 246, 242) 0, transparent 53%);
     border-radius: 50%;
+    clear: both;
     display: inline-block;
     float: left;
     height: 32px;
     opacity: 0.65;
     transition: all ease 0.3s;
-    transform: translateY(-27px) rotate(-10deg);
+    transform: translate(-14px, -23px) rotate(-10deg);
     width: 32px;
 }
 #hamburger:before{
@@ -138,6 +139,12 @@ p:hover {
 
 #hamburger:hover:before{
     content:none;
+}
+
+@media screen and (min-width: 900px){
+    #hamburger{
+        transform: translate(-14px, -23px) rotate(-10deg);
+    }
 }
 
 #page-background {
@@ -170,19 +177,22 @@ p:hover {
 }
 
 #second-menu {
-    display: none;
-    max-width: 60%;
+    margin-right: -40px;
+    max-width: 50%;
     padding: 10px 20px;
     position: absolute;
     right: 0;
 }
 
-#second-menu > section {
-    /* column-count: 2; */
+@media screen and (min-width: 600px){
+    #second-menu{
+        margin-right: 0;
+    }
 }
 
 /**/
 article h2 {
+    clear: both;
     font-weight: normal;
 }
 
@@ -204,7 +214,11 @@ footer a, header section a {
     clear: left;
     opacity: 0.75;
 }
-
+header section a{
+    float: none;
+    clear: both;
+    display: block;
+}
 footer a:hover, header section a:hover {
     border-bottom: none;
     color: #ead9bd;
@@ -217,32 +231,34 @@ h1 a div {
 }
 
 header h1 {
-    position: absolute;
+    float: left;
+    /* position: absolute; */
     transform: translateY(-50%);
     margin: 0;
 }
 
-@media screen and (min-width: 600px) {
-    header h1 {
-        /* transform: translateY(-120%); */
-    }
+header section {
+    /* outline: solid 1px; */
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    transform: translateY(-5vw);
+    width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
     header h1 {
-        transform: translateY(-120px);
+        /* transform: translateY(-120px); */
     }
-}
-
-header section a:hover {
-    text-decoration: underline;
 }
 
 header ul.menu {
     background: rgba(255,255,255,0.15);
     display: none;
     float: left;
-    /* max-width: 40%; */
+    margin-bottom: -80px;
+    max-width: 50%;
+    overflow: hidden;
     padding: 10px 14px;
     position: relative;
     top: 7px;
@@ -265,6 +281,10 @@ ul.menu {
     height: 10px;
     width: 10px;
     margin-right: 9px;
+}
+
+#second-menu > section{
+    display: none;
 }
 
 /* classes */
