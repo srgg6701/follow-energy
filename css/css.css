@@ -70,6 +70,7 @@ header {
     height: 0;
     padding-bottom: 25%;
     padding-top: 25%;
+    z-index: 2;
 }
 
 @media screen and (min-width: 600px) {
@@ -168,7 +169,7 @@ p:hover {
     background-image: url(../images/why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all.jpg);
 }
 .how-it-will-change-my-life #page-background {
-    background-image: url(../images/how-it-will-change-my-life.jpg);
+    background-image: url(../images/how-it-will-change-my-life-1.jpg);
 }
 .where-does-it-reside-and-how-to-retrieve-it #page-background {
     background-image: url(../images/where-does-it-reside-and-how-to-retrieve-it.jpg);
@@ -271,6 +272,7 @@ header section {
 
 header ul.menu {
     background: rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.5);
     display: none;
     float: left;
     margin-bottom: -80px;
@@ -282,7 +284,7 @@ header ul.menu {
     left: 12px;
     list-style: square;
     transform: translateY(-63px);
-    z-index: 1;
+    /* z-index: 0; */
 }
 
 ul.menu {
