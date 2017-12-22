@@ -148,7 +148,9 @@ p:hover {
 }
 
 #page-background {
-    background: url(../images/energy-sun-3.jpg) fixed no-repeat;
+    background-image: url(../images/energy-sun-3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: 25% top;
     background-size: 168%;
     height: 0;
@@ -156,8 +158,23 @@ p:hover {
     position: fixed;
     top: 0;
     right: 0;
-    left: 0;
+    left: 0;    
     z-index: -1;
+}
+.what-is-energy #page-background {
+    background-image: url(../images/what-is-energy.jpg);
+}
+.why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all #page-background {
+    background-image: url(../images/why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all.jpg);
+}
+.how-it-will-change-my-life #page-background {
+    background-image: url(../images/how-it-will-change-my-life.jpg);
+}
+.where-does-it-reside-and-how-to-retrieve-it #page-background {
+    background-image: url(../images/where-does-it-reside-and-how-to-retrieve-it.jpg);
+}
+.how-to-feel-it #page-background {
+    background-image: url(../images/how-to-feel-it.jpg);
 }
 
 @media screen and (min-width: 600px) {
