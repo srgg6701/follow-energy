@@ -21,13 +21,7 @@ a {
 a:hover {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
-}
-
-article {
-    /* box-shadow: 0 0 13px 0px rgba(22,0,2,0.33); */
-    /* border-radius: 12px; */
-    /* background: rgba(22, 0, 2, 0.5); */
-    /* padding: 12px 48px; */
+    margin-bottom: -1px;
 }
 
 footer {
@@ -115,7 +109,7 @@ p:hover {
     display: inline-block;
     float: left;
     height: 32px;
-    opacity: 0.65;
+    /* opacity: 0.65; */
     transition: all ease 0.3s;
     transform: translate(-14px, -23px) rotate(-10deg);
     width: 32px;
@@ -183,11 +177,27 @@ p:hover {
     background-image: url(../images/why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all.jpg);
 }
 
+.why-you-cannot-to-obtain-it-right-now-and-if-it-possible-at-all #hamburger:before {
+    background-image: radial-gradient(rgb(225, 186, 119) 34%, transparent 70%);
+}
+
 .how-it-will-change-my-life{
     background-color: rgb(12, 7, 3);
 }
-.how-it-will-change-my-life main{
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5) -12%, #350b07 5%, transparent 18%);
+.how-it-will-change-my-life header h1{
+    background-image: radial-gradient(#7d3f33 20%, transparent 80%);
+}
+.how-it-will-change-my-life header h1 div:after{
+    content: " ";
+    background-color: rgb(41, 11, 4);
+    bottom: 1vw;
+    box-shadow: 0 0 45px 10px rgba(41, 11, 4,1);
+    left: 1vw;
+    position:absolute;
+    right: 1vw;
+    top: 1vw;
+    z-index: -1;
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.5) -12%, #350b07 5%, transparent 18%);*/
 }
 
 .how-it-will-change-my-life header ul.menu{
@@ -277,20 +287,22 @@ article section {
     background: rgba(0, 0, 0, 0.5);
 }
 
-footer a, header section a {
+footer a {
     float: left;
     clear: left;
-    opacity: 0.75;
 }
 header section a{
-    float: none;
-    clear: both;
-    display: block;
+    /* float: none; */
+    /* clear: both; */
+    /* display: inline-block; */
 }
 footer a:hover, header section a:hover {
-    border-bottom: none;
     color: #ead9bd;
     opacity: 1;
+}
+
+h1 a:hover{
+    border-bottom: none;
 }
 
 h1 a div {
@@ -300,13 +312,18 @@ h1 a div {
 
 header h1 {
     float: left;
-    /* position: absolute; */
     transform: translateY(-50%);
     margin: 0;
 }
 
+header h1 div{
+    clear: both;
+    display: inline-block;
+    float: left;
+    position:relative;
+}
+
 header section {
-    /* outline: solid 1px; */
     margin-top: auto;
     margin-bottom: auto;
     position: relative;
@@ -314,15 +331,8 @@ header section {
     width: 100%;
 }
 
-@media screen and (min-width: 900px) {
-    header h1 {
-        /* transform: translateY(-120px); */
-    }
-}
-
 header ul.menu {
     background: rgba(255,255,255,0.15);
-    /* background: rgba(0,0,0,0.5); */
     display: none;
     float: left;
     margin-bottom: -80px;
@@ -334,7 +344,6 @@ header ul.menu {
     left: 12px;
     list-style: square;
     transform: translateY(-63px);
-    /* z-index: 0; */
 }
 
 ul.menu {
@@ -354,6 +363,14 @@ ul.menu {
 
 #second-menu > section{
     display: none;
+}
+
+li a{
+    display: inline-block;
+}
+
+#second-menu a{
+    display: block;
 }
 
 /* classes */
