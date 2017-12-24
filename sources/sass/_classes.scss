@@ -1,0 +1,10 @@
+.passive{
+    transition:all 1s ease;
+}  
+.slim {
+    font-weight: 300;
+    h2 &{
+        line-height: 1.5;
+        opacity: 0.65;
+    }
+}

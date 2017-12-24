@@ -1,7 +1,10 @@
 $(()=>{
+    const $headerLinkHomepage = $('#headerLink-homepage'),
+        $sectionMenu = $('#section-menu'),
+        passiveClass = 'passive';
     $('#hamburger').on('click', (event) => {
-        $(event.target).next('.menu').slideToggle(() => {
-            $('#second-menu > section').slideToggle();
-        });
+        event.preventDefault();
+        $headerLinkHomepage.toggleClass(passiveClass);
+        $sectionMenu.toggleClass(passiveClass);
     });
 });

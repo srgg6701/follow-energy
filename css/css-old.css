@@ -1,0 +1,384 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #160002;
+    font: 16px/1.9 Verdana, Tahoma, Arial, serif;
+    color: #ead9bd;
+}
+
+a {
+    color: rgb(203, 203, 247);
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    margin-bottom: -1px;
+}
+
+footer {
+    column-count: 3;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 2.9vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
+h2 {
+    margin-bottom: 32px;
+}
+
+header {
+    /* display: flex; */
+    height: 0;
+    padding-bottom: 25%;
+    padding-top: 25%;
+    z-index: 2;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        padding-bottom: 20%;
+        padding-top: 20%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        padding-bottom: 15%;
+        padding-top: 15%;
+    }
+}
+
+iframe {
+    max-width: 100%;
+}
+
+li {
+    line-height: 1.99;
+    list-style: none;
+}
+
+article, footer, header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    /* overflow: hidden; */
+    position: relative;
+    width: 80%;
+}
+
+p:hover {
+    background-color: rgba(255,255,255,0.15);
+    padding: 8px 10px;
+    margin: -8px -10px;
+}
+
+#hamburger {
+    background-image: linear-gradient(to left, rgb(251, 246, 242) 0, transparent 53%);
+    border-radius: 50%;
+    clear: both;
+    display: inline-block;
+    float: left;
+    height: 32px;
+    /* opacity: 0.65; */
+    transition: all ease 0.3s;
+    transform: translate(-14px, -23px) rotate(-10deg);
+    width: 32px;
+}
+#hamburger:before{
+    background-image: radial-gradient(rgba(69, 22, 2, 0.75) 34%, transparent 70%);
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    transform: translate(-7px, -3px);
+}
+
+.what-is-energy #hamburger:before{
+	background-image: radial-gradient(rgba(1, 4, 21, 0.75) 34%, transparent 70%);
+}
+
+.how-to-feel-it #hamburger:before,
+.where-does-it-reside-and-how-to-retrieve-it #hamburger:before{
+	background-image: radial-gradient(rgba(0, 0, 0, 0.75) 34%, transparent 70%);
+}
+
+#hamburger:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#hamburger:hover:before{
+    content:none;
+}
+
+@media screen and (min-width: 900px){
+    #hamburger{
+        transform: translate(-14px, -23px) rotate(-10deg);
+    }
+}
+
+#page-background {
+    background-image: url(../images/energy-sun-3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 25% top;
+    background-size: 168%;
+    height: 0;
+    padding-bottom: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;    
+    z-index: -1;
+}
+.what-is-energy {
+    background-image: linear-gradient(to right, #0d1023, #051d39);
+}
+.what-is-energy #page-background {
+    background-image: url(../images/what-is-energy.jpg);
+}
+
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all{
+    background-color: rgb(20, 17, 12);
+}
+
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all #page-background {
+    background-image: url(../images/why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all.jpg);
+}
+
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all #hamburger:before {
+    background-image: radial-gradient(rgb(225, 186, 119) 34%, transparent 70%);
+}
+
+.how-it-will-change-my-life{
+    background-color: rgb(12, 7, 3);
+}
+.how-it-will-change-my-life header h1{
+    background-image: radial-gradient(#7d3f33 20%, transparent 80%);
+}
+.how-it-will-change-my-life header h1 div:after{
+    content: " ";
+    background-color: rgb(41, 11, 4);
+    bottom: 1vw;
+    box-shadow: 0 0 45px 10px rgba(41, 11, 4,1);
+    left: 1vw;
+    position:absolute;
+    right: 1vw;
+    top: 1vw;
+    z-index: -1;
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.5) -12%, #350b07 5%, transparent 18%);*/
+}
+
+.how-it-will-change-my-life header ul.menu{
+    background: rgba(0,0,0,0.75);
+}
+
+.how-it-will-change-my-life #page-background {
+    background-image: url(../images/how-it-will-change-my-life.jpg);
+}
+.where-does-it-reside-and-how-to-retrieve-it #page-background {
+    background-image: url(../images/where-does-it-reside-and-how-to-retrieve-it.jpg);
+}
+.how-to-feel-it,
+.where-does-it-reside-and-how-to-retrieve-it {
+    background-color: #000;
+}
+.how-to-feel-it #page-background {
+    background-image: url(../images/how-to-feel-it.jpg);
+}
+
+@media screen and (min-width: 600px) {
+    #page-background {
+        background-position: center top;
+        background-size: 135%;
+        padding-bottom: 40%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #page-background {
+        background-position: center top;
+        background-size: contain;
+        padding-bottom: 30%;
+    }
+}
+
+/*#second-menu {
+    margin-right: -40px;
+    max-width: 50%;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+}
+
+@media screen and (min-width: 600px){
+    #second-menu{
+        margin-right: 0;
+    }
+}*/
+
+/**/
+article h2 {
+    clear: both;
+    font-weight: normal;
+}
+
+article p, article li {
+    text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8);
+}
+
+article section {
+    margin-left: -48px;
+    margin-right: -48px;
+    box-shadow: 0 0 13px 0px rgba(22,0,2,0.33);
+    border-radius: 12px;
+    background: rgba(22, 0, 2, 0.5);
+    padding: 12px 48px;
+}
+
+.what-is-energy article section {
+    box-shadow: 0 0 13px 0px rgba(1, 4, 21, 0.33);
+    background: rgba(1, 4, 21, 0.5);
+}
+
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all article section {
+    box-shadow: 0 0 13px 0px rgba(19, 21, 13, 0.33);
+    background: rgba(19, 21, 13, 0.5);
+}
+
+.how-it-will-change-my-life article section {
+    box-shadow: 0 0 13px 0px rgba(12, 7, 3, 0.33);
+    background: rgba(12, 7, 3, 0.5);
+}
+.how-to-feel-it article section,
+.where-does-it-reside-and-how-to-retrieve-it article section{
+    box-shadow: 0 0 13px 0px rgba(0,0,0,0.33);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    float: left;
+    clear: left;
+}
+header section a{
+    /* float: none; */
+    /* clear: both; */
+    /* display: inline-block; */
+}
+footer a:hover, header section a:hover {
+    color: #ead9bd;
+    opacity: 1;
+}
+
+h1 a:hover{
+    border-bottom: none;
+}
+
+h1 a div {
+    color: #fbf6f2;
+    text-shadow: 1px 1px 14px rgba(255,255,255,0.35), -1px -1px 14px rgba(255,255,255,0.35), -1px 1px 14px rgba(255,255,255,0.35), 1px -1px 14px rgba(255,255,255,0.35);
+}
+
+header h1 {
+    float: left;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+header h1 div{
+    clear: both;
+    display: inline-block;
+    float: left;
+    position:relative;
+}
+
+#section-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    transform: translateY(-5vw);
+    width: 100%;
+}
+
+header ul.menu {
+    background: rgba(255,255,255,0.15);
+    /* display: none; */
+    float: left;
+    margin-bottom: -80px;
+    /* max-width: 50%; */
+    /* overflow: hidden; */
+    padding: 10px 14px;
+    position: relative;
+    /* top: 7px; */
+    /* left: 12px; */
+    list-style: square;
+    /* transform: translateY(-63px); */
+}
+
+ul.menu {
+    margin-top: 30px;
+    margin-bottom: 6px;
+    padding-left: 0;
+}
+
+.menu li:before {
+    background-color: rgba(203, 203, 247, 1);
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 9px;
+}
+
+/*#second-menu > section{
+    display: none;
+}*/
+
+li a{
+    display: inline-block;
+}
+
+/*#second-menu a{
+    display: block;
+}*/
+
+/* classes */
+.slim {
+    font-weight: 300;
+}
+
+h2 .slim {
+    line-height: 1.5;
+    opacity: 0.65;
+}

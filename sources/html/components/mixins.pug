@@ -1,12 +1,11 @@
 mixin youtube(link)
-    iframe(width='900', height='506', src='https://www.youtube.com/embed/' + link, frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
-mixin menu(data)
-    ul.menu
-        each link in data
-            li
-                each text, lnk in link
-                    a(href=lnk + '.html') #{text}
-mixin extPages(tag)
-    #{tag}
-        each lnk, text in { 'Awakening':'awakening', 'A Beauty of infinite Life':'beauty-of-infinite-life', 'Empathy':'empathy', 'Extasy':'extasy', 'Freedom':'freedom', 'Heroism':'heroism', 'Sex':'sex', 'True Romance':'true-romance' }
-            a(href=lnk + '.html') #{text}
+  iframe(width='900', height='506', src='https://www.youtube.com/embed/' + link, frameborder='0', gesture='media', allow='encrypted-media', allowfullscreen='')
+mixin menu(data, selector, cls)
+  if !cls
+    if !selector
+      -var cls = 'menu'
+      -var selector = 'ul'
+  #{selector}(class=cls)
+    each text, link in data
+      li
+        a(href=link + '.html') #{text}

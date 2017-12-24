@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "pug sources/html/contents/index.pug -P index.html --out ./",
     "html": "pug sources/html/contents -P --out ./",
-    "index": "pug sources/html/contents/index.pug -P index.html --out ./"
+    "css": "node-sass ./sources/sass/css.scss  ./css/css.css"
   },
   "keywords": [],
   "author": "",

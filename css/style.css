@@ -18,16 +18,6 @@ a {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
     margin-bottom: -1px; }
-    header section a:hover {
-      color: #ead9bd;
-      opacity: 1; }
-
-article {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 900px;
-  position: relative;
-  width: 80%; }
 
 footer {
   column-count: 3;
@@ -38,21 +28,29 @@ footer {
   max-width: 900px;
   position: relative;
   width: 80%; }
+  footer a {
+    float: left;
+    clear: left; }
+    footer a:hover {
+      color: #ead9bd;
+      opacity: 1; }
 
 h1 {
   font-size: 20px;
   font-weight: normal;
   letter-spacing: 2px;
   line-height: 1.6; }
-  @media screen and (min-width: 900px) {
-    h1 {
-      font-size: 2.9vw; } }
-  @media screen and (min-width: 1024px) {
-    h1 {
-      font-size: 28px; } }
+  h1 a:hover {
+    border-bottom: none; }
+  h1 a div {
+    color: #fbf6f2;
+    text-shadow: 1px 1px 14px rgba(255, 255, 255, 0.35), -1px -1px 14px rgba(255, 255, 255, 0.35), -1px 1px 14px rgba(255, 255, 255, 0.35), 1px -1px 14px rgba(255, 255, 255, 0.35); }
 
 h2 {
   margin-bottom: 32px; }
+  h2 .slim {
+    line-height: 1.5;
+    opacity: 0.65; }
 
 header {
   height: 0;
@@ -64,14 +62,52 @@ header {
   max-width: 900px;
   position: relative;
   width: 80%; }
-  @media screen and (min-width: 600px) {
-    header header {
-      padding-bottom: 20%;
-      padding-top: 20%; } }
-  @media screen and (min-width: 900px) {
-    header {
-      padding-bottom: 15%;
-      padding-top: 15%; } }
+  header h1 {
+    float: left;
+    transform: translateY(-50%);
+    margin: 0; }
+    header h1 div {
+      clear: both;
+      display: inline-block;
+      float: left;
+      position: relative; }
+  header section a:hover {
+    color: #ead9bd;
+    opacity: 1; }
+  header ul.menu {
+    background: rgba(255, 255, 255, 0.15);
+    float: left;
+    margin-bottom: -80px;
+    padding: 10px 14px;
+    position: relative;
+    list-style: square; }
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.9vw; }
+  header {
+    padding-bottom: 15%;
+    padding-top: 15%; }
+  #hamburger {
+    transform: translate(-14px, -23px) rotate(-10deg); }
+  #page-background {
+    background-position: center top;
+    background-size: contain;
+    padding-bottom: 30%; } }
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 28px; } }
+
+@media screen and (min-width: 600px) {
+  header {
+    /* padding-bottom: 20%; */
+    /* padding-top: 20%; */
+    }
+  #page-background {
+    background-position: center top;
+    background-size: 135%;
+    padding-bottom: 40%; } }
 
 iframe {
   max-width: 100%; }
@@ -79,23 +115,37 @@ iframe {
 li {
   line-height: 1.99;
   list-style: none; }
+  li a {
+    display: inline-block; }
 
-main {
-  overflow-x: hidden; }
+article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  position: relative;
+  width: 80%; }
+  article h2 {
+    clear: both;
+    font-weight: normal; }
+  article p {
+    text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8); }
+  article li {
+    text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8); }
+  article section {
+    margin-left: -48px;
+    margin-right: -48px;
+    box-shadow: 0 0 13px 0 rgba(22, 0, 2, 0.33);
+    border-radius: 12px;
+    background: rgba(22, 0, 2, 0.5);
+    padding: 12px 48px; }
 
 p:hover {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 8px 10px;
   margin: -8px -10px; }
 
-.passive {
-  transition: all 1s ease; }
-
 .slim {
   font-weight: 300; }
-  h2 .slim {
-    line-height: 1.5;
-    opacity: 0.65; }
 
 .how-to-feel-it {
   background-color: #000; }
@@ -128,23 +178,21 @@ p:hover {
     background: rgba(19, 21, 13, 0.5); }
 
 .how-it-will-change-my-life {
-  background-color: #020001; }
-  .how-it-will-change-my-life header {
-    /* ul.menu {
-			background: $black_75;
-		} */ }
-    .how-it-will-change-my-life header h1 {
-      background-image: radial-gradient(#7d3f33 20%, transparent 80%); }
-      .how-it-will-change-my-life header h1 div:after {
-        content: " ";
-        background-color: #290b04;
-        bottom: 1vw;
-        box-shadow: 0 0 45px 10px #290b04;
-        left: 1vw;
-        position: absolute;
-        right: 1vw;
-        top: 1vw;
-        z-index: -1; }
+  background-color: #0c0703; }
+  .how-it-will-change-my-life header h1 {
+    background-image: radial-gradient(#7d3f33 20%, transparent 80%); }
+    .how-it-will-change-my-life header h1 div:after {
+      content: " ";
+      background-color: #290b04;
+      bottom: 1vw;
+      box-shadow: 0 0 45px 10px #290b04;
+      left: 1vw;
+      position: absolute;
+      right: 1vw;
+      top: 1vw;
+      z-index: -1; }
+  .how-it-will-change-my-life header ul.menu {
+    background: rgba(0, 0, 0, 0.75); }
   .how-it-will-change-my-life #page-background {
     background-image: url(../images/how-it-will-change-my-life.jpg); }
   .how-it-will-change-my-life article section {
@@ -174,69 +222,16 @@ p:hover {
   right: 0;
   left: 0;
   z-index: -1; }
-  @media screen and (min-width: 600px) {
-    #page-background {
-      background-position: center top;
-      background-size: 135%;
-      padding-bottom: 40%; } }
-  @media screen and (min-width: 900px) {
-    #page-background {
-      background-position: center top;
-      background-size: contain;
-      padding-bottom: 30%; } }
-
-footer a {
-  float: left;
-  clear: left; }
-  footer a:hover {
-    color: #ead9bd;
-    opacity: 1; }
-
-h1 a:hover {
-  border-bottom: none; }
-
-li a {
-  display: inline-block; }
-
-h1 div {
-  color: #fbf6f2;
-  text-shadow: 1px 1px 14px rgba(255, 255, 255, 0.35), -1px -1px 14px rgba(255, 255, 255, 0.35), -1px 1px 14px rgba(255, 255, 255, 0.35), 1px -1px 14px rgba(255, 255, 255, 0.35); }
-
-h1 div {
-  clear: both;
-  display: inline-block;
-  float: left;
-  position: relative; }
-
-header h1 {
-  float: left;
-  transform: translateY(-50%);
-  margin: 0; }
-
-article h2 {
-  clear: both;
-  font-weight: normal; }
-
-article li {
-  text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8); }
-
-article p {
-  text-shadow: 1px 1px 18px rgba(251, 246, 242, 0.8); }
-
-article section {
-  margin-left: -48px;
-  margin-right: -48px;
-  box-shadow: 0 0 13px 0 rgba(22, 0, 2, 0.33);
-  border-radius: 12px;
-  background: rgba(22, 0, 2, 0.5);
-  padding: 12px 48px; }
 
 #hamburger {
   background-image: linear-gradient(to left, #fbf6f2 0, transparent 53%);
   border-radius: 50%;
+  clear: both;
+  display: inline-block;
+  float: left;
   height: 32px;
   transition: all ease 0.3s;
-  transform: translate(-8px, 8px) rotate(-10deg);
+  transform: translate(-14px, -23px) rotate(-10deg);
   width: 32px; }
   #hamburger:before {
     background-image: radial-gradient(rgba(69, 22, 2, 0.75) 34%, transparent 70%);
@@ -251,9 +246,6 @@ article section {
     opacity: 1; }
     #hamburger:hover:before {
       content: none; }
-  @media screen and (min-width: 900px) {
-    #hamburger {
-      transform: translate(-14px, 6px) rotate(-10deg); } }
 
 #section-logo {
   margin-top: auto;
@@ -261,33 +253,16 @@ article section {
   position: relative;
   transform: translateY(-5vw);
   width: 100%; }
-  #section-logo a {
-    transition: all, 0.3s ease; }
-    #section-logo a.passive {
-      opacity: 0; }
 
-#section-menu {
-  background-color: rgba(0, 0, 0, 0.7);
-  bottom: 0;
-  display: flex;
-  left: 34px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translateX(0);
-  transition: all, 0.3s ease; }
-  #section-menu.passive {
-    left: 0;
-    opacity: 0;
-    transform: translateX(100%); }
-
-.menu {
+ul.menu {
   margin-top: 30px;
   margin-bottom: 6px;
   padding-left: 0; }
-  #section-menu .menu:first-child {
-    width: 100%; }
-  header .menu {
-    padding: 10px 14px;
-    position: relative;
-    list-style: square; }
+
+.menu li:before {
+  background-color: #cbcbf7;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 9px; }

@@ -1,0 +1,87 @@
+.how-to-feel-it {
+	background-color: $black;
+	#page-background {
+		background-image: $img_howToFeelIt;
+	}
+	#hamburger:before {
+		background-image: radial-gradient($black_75 34%, transparent 70%);
+	}
+	article section {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $black_33;
+		background: $black_50;
+	}
+}
+.where-does-it-reside-and-how-to-retrieve-it {
+	background-color: $black;
+	#page-background {
+		background-image: $img_whereDoesItReside;
+	}
+	#hamburger:before {
+		background-image: radial-gradient($black_75 34%, transparent 70%);
+	}
+	article section {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $black_33;
+		background: $black_50;
+	}
+}
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all {
+	background-color: $color_green_waterloo_approx;
+	#page-background {
+		background-image: $img_whyYouCannotObtainIt;
+	}
+	#hamburger:before {
+		background-image: radial-gradient($color_harvest_gold_approx 34%, transparent 70%);
+	}
+	article section {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $color_green_waterloo_33_approx;
+		background: $color_green_waterloo_50_approx;
+	}
+}
+.how-it-will-change-my-life {
+	background-color: $color_asphalt_approx;
+	header {
+		h1 {
+			background-image: radial-gradient($color_nutmeg_approx 20%, transparent 80%);
+			div:after {
+				content: " ";
+				background-color: $color_kilamanjaro_approx;
+				bottom: 1vw;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 45px 10px $color_kilamanjaro_approx;
+				left: 1vw;
+				position: absolute;
+				right: 1vw;
+				top: 1vw;
+				z-index: -1;
+			}
+		}
+		/* ul.menu {
+			background: $black_75;
+		} */
+	}
+	#page-background {
+		background-image: $img_howItWillChangeMyLife;
+	}
+	article section {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $color_asphalt_33_approx;
+		background: $color_asphalt_50_approx;
+	}
+}
+.what-is-energy {
+	background-image: linear-gradient(to right, $color_vulcan_approx, $color_tangaroa_approx);
+	#page-background {
+		background-image: $img_whatIsEnergy;
+	}
+	#hamburger:before {
+		background-image: radial-gradient($color_jaguar_75_approx 34%, transparent 70%);
+	}
+	article section {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $color_jaguar_33_approx;
+		background: $color_jaguar_50_approx;
+	}
+}

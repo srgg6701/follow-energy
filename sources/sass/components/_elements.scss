@@ -1,0 +1,74 @@
+a{	
+	footer &{
+		float: left;
+		clear: left;
+		&:hover {
+			color: $color_raffia_approx;
+			opacity: 1;
+		}
+	}
+	h1 &{
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	li & {
+		display: inline-block;
+	}
+}
+div {
+	h1 &{
+		color: $color_spring_wood_approx;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 1px 1px 14px $white_35, -1px -1px 14px $white_35, -1px 1px 14px $white_35, 1px -1px 14px $white_35;
+	}
+	h1 &{
+		clear: both;
+		display: inline-block;
+		float: left;
+		position: relative;
+	}
+}
+
+h1{
+	header &{
+		float: left;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		margin: 0;
+	}
+}
+
+h2 {
+	article &{
+		clear: both;
+		font-weight: normal;
+	}
+}
+
+li {
+	article &{
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 1px 1px 18px $color_spring_wood_80_approx;
+	}
+}
+
+p {
+	article &{
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 1px 1px 18px $color_spring_wood_80_approx;
+	}
+}
+
+section {
+	article &{
+		margin-left: -48px;
+		margin-right: -48px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 13px 0 $color_diesel_33_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 12px;
+		background: $color_diesel_50_approx;
+		padding: 12px 48px;
+	}
+}
