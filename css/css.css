@@ -234,7 +234,7 @@ p:hover {
     }
 }
 
-#second-menu {
+/*#second-menu {
     margin-right: -40px;
     max-width: 50%;
     padding: 10px 20px;
@@ -246,7 +246,7 @@ p:hover {
     #second-menu{
         margin-right: 0;
     }
-}
+}*/
 
 /**/
 article h2 {
@@ -323,7 +323,7 @@ header h1 div{
     position:relative;
 }
 
-header section {
+#section-logo {
     margin-top: auto;
     margin-bottom: auto;
     position: relative;
@@ -333,17 +333,17 @@ header section {
 
 header ul.menu {
     background: rgba(255,255,255,0.15);
-    display: none;
+    /* display: none; */
     float: left;
     margin-bottom: -80px;
-    max-width: 50%;
-    overflow: hidden;
+    /* max-width: 50%; */
+    /* overflow: hidden; */
     padding: 10px 14px;
     position: relative;
-    top: 7px;
-    left: 12px;
+    /* top: 7px; */
+    /* left: 12px; */
     list-style: square;
-    transform: translateY(-63px);
+    /* transform: translateY(-63px); */
 }
 
 ul.menu {
@@ -361,17 +361,17 @@ ul.menu {
     margin-right: 9px;
 }
 
-#second-menu > section{
+/*#second-menu > section{
     display: none;
-}
+}*/
 
 li a{
     display: inline-block;
 }
 
-#second-menu a{
+/*#second-menu a{
     display: block;
-}
+}*/
 
 /* classes */
 .slim {
