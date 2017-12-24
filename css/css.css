@@ -253,7 +253,28 @@ article section {
       content: none; }
   @media screen and (min-width: 900px) {
     #hamburger {
-      transform: translate(-14px, 6px) rotate(-10deg); } }
+      transform: translate(-14px, 6px) rotate(-10deg); }
+      #hamburger.swollen {
+        /*opacity: 0.4;
+        transition: all 0.5s ease;
+        transform: translate(-14px, 6px) rotate(-10deg) scale(3);*/ 
+          animation-name: swell;
+          animation-duration: 4s;
+          animation-delay: 0.9s;
+          animation-fill-mode: both; 
+        } 
+      }
+
+@keyframes swell{
+  from{
+    opacity: 1;
+    transform: translate(-14px, 6px) rotate(-10deg) scale(1);
+  }
+  to{
+    opacity: 0.4;
+    transform: translate(-14px, 6px) rotate(-10deg) scale(3);
+  }
+}
 
 #section-logo {
   margin-top: auto;
@@ -275,7 +296,9 @@ article section {
   right: 0;
   top: 0;
   transform: translateX(0);
-  transition: all, 0.3s ease; }
+  transition: all, 0.3s ease;
+  z-index: 10;
+  }
   #section-menu.passive {
     left: 0;
     opacity: 0;
@@ -285,8 +308,6 @@ article section {
   margin-top: 30px;
   margin-bottom: 6px;
   padding-left: 0; }
-  #section-menu .menu:first-child {
-    width: 100%; }
   header .menu {
     padding: 10px 14px;
     position: relative;
