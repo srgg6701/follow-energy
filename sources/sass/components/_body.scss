@@ -1,24 +1,11 @@
 #page-background {
 	background-image: $img_energySun3;
-	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-position: 25% top;
-	background-size: 168%;
-	height: 0;
-	padding-bottom: 50%;
+	background-position: center top;
+	background-size: contain;
+	@include headerHeight;
 	position: fixed;
 	top: 0;
-	right: 0;
-	left: 0;
+	width: 100%;
 	z-index: -1;
-    @media screen and(min-width: $breakPointMobileBig) {
-        background-position: center top;
-        background-size: 135%;
-        padding-bottom: 40%;
-    }
-    @media screen and(min-width: $breakPointTablet) {
-        background-position: center top;
-		background-size: contain;
-		padding-bottom: 30%;
-    }
 }

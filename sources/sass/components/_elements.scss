@@ -1,4 +1,21 @@
+* {
+	body &{
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+}
 a{	
+	&:hover {
+		border-bottom-width: 1px;
+		border-bottom-style: dotted;
+		margin-bottom: -1px;
+		section &{			
+			header &{
+				color: $color_raffia_approx;
+				opacity: 1;
+			}
+		  }
+	}
 	footer &{
 		float: left;
 		clear: left;
@@ -29,7 +46,6 @@ div {
 		position: relative;
 	}
 }
-
 h1{
 	header &{
 		float: left;
@@ -38,28 +54,29 @@ h1{
 		margin: 0;
 	}
 }
-
 h2 {
 	article &{
 		clear: both;
 		font-weight: normal;
 	}
 }
-
 li {
 	article &{
 		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		text-shadow: 1px 1px 18px $color_spring_wood_80_approx;
 	}
 }
-
 p {
+	&:hover {
+		background-color: $white_15;
+		padding: 8px 10px;
+		margin: -8px -10px;
+	}
 	article &{
 		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		text-shadow: 1px 1px 18px $color_spring_wood_80_approx;
 	}
 }
-
 section {
 	article &{
 		margin-left: -48px;
