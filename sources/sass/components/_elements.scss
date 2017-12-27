@@ -6,15 +6,12 @@
 }
 a{	
 	&:hover {
-		border-bottom-width: 1px;
-		border-bottom-style: dotted;
-		margin-bottom: -1px;
-		section &{			
-			header &{
-				color: $color_raffia_approx;
-				opacity: 1;
-			}
-		  }
+		.menu &{			
+			background-color: #000;
+			color: white;
+			margin: auto -10px;
+			padding: 0 10px;
+		}
 	}
 	footer &{
 		float: left;
@@ -48,10 +45,7 @@ div {
 }
 h1{
 	header &{
-		float: left;
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(-50%);
-		margin: 0;
+		margin-top: auto;
 	}
 }
 h2 {

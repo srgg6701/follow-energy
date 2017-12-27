@@ -2,7 +2,7 @@
 	background-image: $img_energySun3;
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: contain;
+	background-size: cover;
 	@include headerHeight;
 	position: fixed;
 	top: 0;

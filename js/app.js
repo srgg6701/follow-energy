@@ -1,12 +1,17 @@
-$(()=>{
-    const $headerLinkHomepage = $('#headerLink-homepage'),
+$(() => {
+    const $hambureger = $('#hamburger'),
         $sectionMenu = $('#section-menu'),
-        passiveClass = 'passive';
-    
-    
-    $('#hamburger').on('click', (event) => {
+        passiveClass = 'passive',
+        activeClass = 'active',
+        $close = $('#close-container .close');
+
+    $hambureger.on('click', event => { //console.log('clicked!');
         event.preventDefault();
-        $headerLinkHomepage.toggleClass(passiveClass);
-        $sectionMenu.toggleClass(passiveClass);
+        $sectionMenu.removeClass(passiveClass).addClass(activeClass);
+        $close.delay(500).fadeIn(1000);
+    });
+    $close.on('click', event => {
+        event.target.style.display = 'none';
+        $sectionMenu.addClass(passiveClass).removeClass(activeClass);
     });
 });

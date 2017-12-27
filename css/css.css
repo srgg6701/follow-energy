@@ -64,9 +64,9 @@ li {
 main {
   overflow-x: hidden; }
 
-.passive {
-  transition: all 1s ease; }
-
+/* .passive{
+    transition:all 1s ease;
+}  */
 .slim {
   font-weight: 300; }
   h2 .slim {
@@ -141,7 +141,7 @@ main {
   background-image: url(../images/energy-sun-3.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   height: 60%;
   min-height: 404px;
   position: fixed;
@@ -152,13 +152,11 @@ main {
 body * {
   box-sizing: border-box; }
 
-a:hover {
-  border-bottom-width: 1px;
-  border-bottom-style: dotted;
-  margin-bottom: -1px; }
-  header section a:hover {
-    color: #ead9bd;
-    opacity: 1; }
+.menu a:hover {
+  background-color: #000;
+  color: white;
+  margin: auto -10px;
+  padding: 0 10px; }
 
 footer a {
   float: left;
@@ -184,9 +182,7 @@ h1 div {
   position: relative; }
 
 header h1 {
-  float: left;
-  transform: translateY(-50%);
-  margin: 0; }
+  margin-top: auto; }
 
 article h2 {
   clear: both;
@@ -210,6 +206,27 @@ article section {
   border-radius: 12px;
   background: rgba(22, 0, 2, 0.5);
   padding: 12px 48px; }
+
+#close-container {
+  margin: auto;
+  max-width: 900px;
+  width: 100%; }
+  #close-container .close {
+    background: rgba(0, 0, 0, 0.75);
+    float: left;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    display: none;
+    padding: 5px 12px 5px 2px; }
+    #close-container .close:before {
+      content: "+";
+      border-radius: 50%;
+      display: inline-block;
+      font-size: 22px;
+      height: 16px;
+      line-height: 2px;
+      margin-right: 8px;
+      transform: rotate(45deg); }
 
 #hamburger {
   background-image: linear-gradient(to left, #fbf6f2 0, transparent 53%);
@@ -240,36 +257,60 @@ article section {
         transform: translate(-14px, 6px) rotate(-10deg) scale(3); } }
 
 #section-logo {
-  margin-top: auto;
-  margin-bottom: auto;
-  position: relative;
-  transform: translateY(-5vw);
-  width: 100%; }
+  display: flex;
+  height: 56%; }
   #section-logo a {
     transition: all, 0.3s ease; }
     #section-logo a.passive {
       opacity: 0; }
 
 #section-menu {
-  background-color: rgba(0, 0, 0, 0.7);
-  bottom: 0;
+  background-color: rgba(140, 140, 140, 0.7);
   display: flex;
-  left: 34px;
-  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+  min-height: 404px;
+  left: 0;
+  position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(0);
   transition: all, 0.3s ease; }
   #section-menu.passive {
-    left: 0;
     opacity: 0;
-    transform: translateX(100%); }
+    right: -100%;
+    transform: translateX(100%);
+    transition: all, 0.3s ease; }
+
+header aside {
+  padding: 0 10px; }
 
 .menu {
   margin-top: 30px;
   margin-bottom: 6px;
   padding-left: 0; }
   header .menu {
+    float: left;
+    list-style: square;
+    margin-right: 10px;
+    opacity: 0;
     padding: 10px 14px;
-    position: relative;
-    list-style: square; }
+    position: relative; }
+    header .menu:nth-child(1) {
+      background-color: rgba(60, 60, 160, 0.75); }
+    header .menu:nth-child(2) {
+      background-color: rgba(160, 60, 160, 0.75); }
+  header .active .menu {
+    animation-name: setVisible;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; }
+    header .active .menu:nth-child(1) {
+      animation-delay: 0.5s; }
+    header .active .menu:nth-child(2) {
+      animation-delay: 0.8s; }
+
+@keyframes setVisible {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

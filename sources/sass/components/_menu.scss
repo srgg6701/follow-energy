@@ -1,10 +1,48 @@
+aside{
+    header &{
+        padding: 0 10px;
+    }
+}
 .menu { // $color_periwinkle_approx
+    @mixin nthChildsMenu(){
+
+    }
     margin-top: 30px;
     margin-bottom: 6px;
     padding-left: 0;
-    header &{      
+    header &{
+        float: left;
+        list-style: square;
+        margin-right: 10px;
+        opacity: 0;
         padding: 10px 14px;
         position: relative;
-        list-style: square;
+        &:nth-child(1){
+            background-color: rgba(60,60,160,0.75);
+        }
+        &:nth-child(2){
+            background-color: rgba(160,60,160,0.75);
+        }
+    }
+    //
+    header .active &{
+        animation-name: setVisible;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        &:nth-child(1){
+            animation-delay: 0.5s;
+        }
+        &:nth-child(2){
+            animation-delay: 0.8s;
+        }     
+    }
+}
+
+@keyframes setVisible {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
