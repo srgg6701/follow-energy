@@ -13,20 +13,25 @@ html(lang='en')
     script(src='js/jquery.min.js')
   - var menu1 = { "what-is-energy": "What is energy indeed?" , "how-it-will-change-my-life": "How it will change my life?" , "why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all": "Why you cannot obtain it right now and if it possible at all?" , "where-does-it-reside-and-how-to-retrieve-it": "Where does it reside and how to retrieve it?" , "how-to-feel-it": "How to feel it?" }
   - var menu2 = { 'awakening':'Awakening', 'beauty-of-infinite-life':'A Beauty of infinite Life', 'empathy':'Empathy', 'extasy':'Extasy', 'freedom':'Freedom', 'heroism':'Heroism', 'sex':'Sex', 'true-romance':'True Romance' }
+  - var homePageLink = 'index.html'
   body(class=body_class)
     header
       section#section-logo
         h1
-          a#headerLink-homepage(href='index.html', title='Go to Homepage')
+          a#headerLink-homepage(href=homePageLink, title='Go to Homepage')
             div All you need
             div is Energy
           #hamburger
+            span
       section#section-menu.passive
         aside
           +menu(menu1)
           +menu(menu2)
         #close-container
-          .close close
+          .home 
+            a(href=homePageLink) home
+          .close 
+            a(href="#") close
     main
       article
         section
