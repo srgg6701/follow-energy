@@ -1,87 +1,88 @@
-.how-to-feel-it {
-	background-color: $black;
-	#page-background {
-		background-image: $img_howToFeelIt;
+@mixin themeHeader($bg-color, $bg-image:null, $planet-color:null, $color-pos:34%, $transp-pos:70%){
+	@if $bg-color {
+		background-color: $bg-color;
 	}
-	#hamburger:before {
-		background-image: radial-gradient($black_75 34%, transparent 70%);
+	@if $bg-image{
+		#page-background {
+			background-image: url(../images/#{$bg-image}.jpg);
+		}
 	}
-	article section {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 0 13px 0 $black_33;
-		background: $black_50;
-	}
-}
-.where-does-it-reside-and-how-to-retrieve-it {
-	background-color: $black;
-	#page-background {
-		background-image: $img_whereDoesItReside;
-	}
-	#hamburger:before {
-		background-image: radial-gradient($black_75 34%, transparent 70%);
-	}
-	article section {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 0 13px 0 $black_33;
-		background: $black_50;
+	@if $planet-color{
+		#hamburger > span:before {
+			background-image: radial-gradient($planet-color 34%, transparent 70%);
+		}
 	}
 }
-.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all {
-	background-color: $color_green_waterloo_approx;
-	#page-background {
-		background-image: $img_whyYouCannotObtainIt;
-	}
-	#hamburger:before {
-		background-image: radial-gradient($color_harvest_gold_approx 34%, transparent 70%);
-	}
-	article section {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 0 13px 0 $color_green_waterloo_33_approx;
-		background: $color_green_waterloo_50_approx;
-	}
-}
-.how-it-will-change-my-life {
-	background-color: $color_asphalt_approx;
-	header {
-		h1 {
-			background-image: radial-gradient($color_nutmeg_approx 20%, transparent 80%);
-			div:after {
-				content: " ";
-				background-color: $color_kilamanjaro_approx;
-				bottom: 1vw;
-				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-				box-shadow: 0 0 45px 10px $color_kilamanjaro_approx;
-				left: 1vw;
-				position: absolute;
-				right: 1vw;
-				top: 1vw;
-				z-index: -1;
+@mixin articleSet($boxshadow-color, $background-color:null){
+	article {
+		section{
+			box-shadow: 0 0 13px 0 $boxshadow-color;
+			@if $background-color {
+				background: $background-color;
 			}
 		}
-		/* ul.menu {
-			background: $black_75;
-		} */
-	}
-	#page-background {
-		background-image: $img_howItWillChangeMyLife;
-	}
-	article section {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 0 13px 0 $color_asphalt_33_approx;
-		background: $color_asphalt_50_approx;
 	}
 }
+
 .what-is-energy {
 	background-image: linear-gradient(to right, $color_vulcan_approx, $color_tangaroa_approx);
-	#page-background {
-		background-image: $img_whatIsEnergy;
+	@include themeHeader(null, what-is-energy, $color_jaguar_75_approx);
+	@include articleSet($color_jaguar_33_approx, $color_jaguar_50_approx);
+}
+.how-to-feel-it {
+	@include themeHeader($black, how-to-feel-it, $black_75);
+	@include articleSet($black_33, $black_50);
+}
+.where-does-it-reside-and-how-to-retrieve-it {
+	@include themeHeader($black, where-does-it-reside-and-how-to-retrieve-it, $black_75);
+	@include articleSet($black_33, $black_50);
+}
+.why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all {
+	@include themeHeader($color_green_waterloo_approx, why-you-cannot-obtain-it-right-now-and-if-it-possible-at-all, $color_harvest_gold_approx);
+	@include articleSet($color_green_waterloo_33_approx, $color_green_waterloo_50_approx);
+}
+.how-it-will-change-my-life {
+	@include themeHeader($color_asphalt_approx, how-it-will-change-my-life, #020001);
+	@include articleSet($color_asphalt_33_approx, $color_asphalt_50_approx);
+}
+// second menus themes
+.awakening {
+	@include themeHeader(#0b1619, awakening, #0b1619);
+	@include articleSet(rgba(11, 22, 25, 0.35), rgba(11, 22, 25, 0.33));
+}
+.empathy{
+	@include themeHeader(#f1f3ef, empathy1, #ced0c5);
+	@include articleSet(rgba(0, 0, 0, 0.75));
+	$link-color: #000;
+	footer {
+		a{
+			color: $link-color;
+			&:hover{
+				color: #673AB7;
+			}
+		}
 	}
-	#hamburger:before {
-		background-image: radial-gradient($color_jaguar_75_approx 34%, transparent 70%);
+	h1 {
+		a {
+			div{
+				color: black;
+			}
+		}
 	}
-	article section {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 0 13px 0 $color_jaguar_33_approx;
-		background: $color_jaguar_50_approx;
-	}
+}
+.ecstasy{
+	@include themeHeader(#020202, ecstasy, rgb(147, 169, 190));
+	@include articleSet(rgba(2, 2, 2, 0.35), rgba(2, 2, 2, 0.33));
+}
+.freedom{
+	@include themeHeader(#1a0f25, freedom1, rgba(175, 141, 76, 0.4));
+	@include articleSet(rgba(26, 15, 37, 0.35), rgba(26, 15, 37, 0.33));
+}
+.heroism{
+	@include themeHeader(rgb(74, 33, 26), heroism, rgb(74, 47, 30));
+	@include articleSet(rgba(74, 33, 26, 0.35), rgba(74, 33, 26, 0.33));
+}
+.true-romance{
+	@include themeHeader(rgb(95, 60, 31), true-romance, rgba(138, 89, 55, 0.85));
+	@include articleSet(rgba(95, 60, 31, 0.35), rgba(95, 60, 31, 0.33));
 }
