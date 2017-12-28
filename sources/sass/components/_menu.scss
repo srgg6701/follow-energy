@@ -7,11 +7,11 @@ aside{
     @mixin nthChildsMenu(){
 
     }
-    box-shadow: 0 0 10px rgba(10,10,10,0.3);
     margin-top: 30px;
     margin-bottom: 6px;
     padding-left: 0;
     header &{
+        box-shadow: 0 0 10px rgba(10,10,10,0.3);
         float: left;
         list-style: square;
         margin-right: 10px;

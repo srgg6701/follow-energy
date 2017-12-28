@@ -50,15 +50,18 @@
         transition: all ease 0.3s;
         //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
         width: 32px;
-        &:before {
-            background-image: radial-gradient($color_brown_pod_75_approx 34%, transparent 70%);
-            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        &:before, &:after{
             border-radius: 50%;
             content: "";
             display: inline-block;
             height: 40px;
             width: 40px;
-            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        }
+        &:after{
+            transform: translate(-7px, -54px);
+        }
+        &:before {
+            background-image: radial-gradient($color_brown_pod_75_approx 34%, transparent 70%);
             transform: translate(-7px, -3px);
         }
         &:hover {

@@ -81,14 +81,14 @@ main {
     opacity: 0.65; }
 
 .what-is-energy {
-  background-image: linear-gradient(to right, #0d1023, #051d39); }
+  background-color: #000414; }
   .what-is-energy #page-background {
     background-image: url(../images/what-is-energy.jpg); }
   .what-is-energy #hamburger > span:before {
     background-image: radial-gradient(rgba(1, 4, 21, 0.75) 34%, transparent 70%); }
   .what-is-energy article section {
-    box-shadow: 0 0 13px 0 rgba(1, 4, 21, 0.33);
-    background: rgba(1, 4, 21, 0.5); }
+    box-shadow: 0 0 13px 0 rgba(0, 4, 20, 0.35);
+    background: rgba(0, 4, 20, 0.5); }
 
 .how-to-feel-it {
   background-color: #000; }
@@ -141,19 +141,31 @@ main {
     background: rgba(11, 22, 25, 0.33); }
 
 .empathy {
-  background-color: #f1f3ef; }
+  background-color: #575043; }
+  .empathy h1 div {
+    text-shadow: 1px 1px 14px rgba(137, 113, 46, 0.15), -1px -1px 14px rgba(137, 113, 46, 0.15), -1px 1px 14px rgba(137, 113, 46, 0.15), 1px -1px 14px rgba(137, 113, 46, 0.15); }
+  .empathy h1 a div {
+    color: #7b7049; }
   .empathy #page-background {
     background-image: url(../images/empathy1.jpg); }
+  .empathy #hamburger > span:after {
+    background-image: radial-gradient(#e9e9df 58%, transparent 92%);
+    transform: translate(-7px, -54px); }
   .empathy #hamburger > span:before {
-    background-image: radial-gradient(#ced0c5 34%, transparent 70%); }
+    background-image: radial-gradient(#000000 20%, transparent 73%);
+    opacity: 0.5;
+    transform: translate(-3px, -3px); }
+  .empathy #hamburger > span:hover {
+    opacity: 0.65; }
+    .empathy #hamburger > span:hover:after {
+      background-image: radial-gradient(#f7f7f7 0%, transparent 84%);
+      transform: translate(-1px, -53px); }
+    .empathy #hamburger > span:hover:before {
+      opacity: 0.3;
+      transform: translate(0px, -3px); }
   .empathy article section {
-    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.75); }
-  .empathy footer a {
-    color: #000; }
-    .empathy footer a:hover {
-      color: #673AB7; }
-  .empathy h1 a div {
-    color: black; }
+    box-shadow: 0 0 13px 0 rgba(87, 80, 67, 0.33);
+    background: rgba(87, 80, 67, 0.5); }
 
 .ecstasy {
   background-color: #020202; }
@@ -185,15 +197,8 @@ main {
     box-shadow: 0 0 13px 0 rgba(74, 33, 26, 0.35);
     background: rgba(74, 33, 26, 0.33); }
 
-.true-romance {
-  background-color: #5f3c1f; }
-  .true-romance #page-background {
-    background-image: url(../images/true-romance.jpg); }
-  .true-romance #hamburger > span:before {
-    background-image: radial-gradient(rgba(138, 89, 55, 0.85) 34%, transparent 70%); }
-  .true-romance article section {
-    box-shadow: 0 0 13px 0 rgba(95, 60, 31, 0.35);
-    background: rgba(95, 60, 31, 0.33); }
+.true-romance #page-background {
+  background-image: url(../images/true-romance.jpg); }
 
 #page-background {
   background-image: url(../images/energy-sun-3.jpg);
@@ -240,6 +245,7 @@ h1 div {
   position: relative; }
 
 header h1 {
+  margin-bottom: -54px;
   margin-top: auto; }
 
 article h2 {
@@ -305,13 +311,16 @@ article section {
     display: inline-block;
     transition: all ease 0.3s;
     width: 32px; }
-    #hamburger span:before {
-      background-image: radial-gradient(rgba(69, 22, 2, 0.75) 34%, transparent 70%);
+    #hamburger span:before, #hamburger span:after {
       border-radius: 50%;
       content: "";
       display: inline-block;
       height: 40px;
-      width: 40px;
+      width: 40px; }
+    #hamburger span:after {
+      transform: translate(-7px, -54px); }
+    #hamburger span:before {
+      background-image: radial-gradient(rgba(69, 22, 2, 0.75) 34%, transparent 70%);
       transform: translate(-7px, -3px); }
     #hamburger span:hover {
       cursor: pointer;
@@ -363,11 +372,11 @@ header aside {
   padding: 0 10px; }
 
 .menu {
-  box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
   margin-top: 30px;
   margin-bottom: 6px;
   padding-left: 0; }
   header .menu {
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
     float: left;
     list-style: square;
     margin-right: 10px;

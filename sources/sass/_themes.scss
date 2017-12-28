@@ -1,4 +1,12 @@
-@mixin themeHeader($bg-color, $bg-image:null, $planet-color:null, $color-pos:34%, $transp-pos:70%){
+@mixin themeHeader(
+		$bg-color:null, 
+		$bg-image:null, 
+		$planet-color:null, 
+		$color-pos:34%, 
+		$transp-pos:70%, 
+		$transp:transparent
+	){
+	
 	@if $bg-color {
 		background-color: $bg-color;
 	}
@@ -9,7 +17,7 @@
 	}
 	@if $planet-color{
 		#hamburger > span:before {
-			background-image: radial-gradient($planet-color 34%, transparent 70%);
+			background-image: radial-gradient($planet-color $color-pos, $transp $transp-pos);
 		}
 	}
 }
@@ -25,9 +33,9 @@
 }
 
 .what-is-energy {
-	background-image: linear-gradient(to right, $color_vulcan_approx, $color_tangaroa_approx);
-	@include themeHeader(null, what-is-energy, $color_jaguar_75_approx);
-	@include articleSet($color_jaguar_33_approx, $color_jaguar_50_approx);
+	//background-image: linear-gradient(to right, $color_vulcan_approx, $color_tangaroa_approx);
+	@include themeHeader(rgb(0,4,20), what-is-energy, $color_jaguar_75_approx);
+	@include articleSet(rgba(0,4,20, 0.35), rgba(0,4,20, 0.5));
 }
 .how-to-feel-it {
 	@include themeHeader($black, how-to-feel-it, $black_75);
@@ -51,24 +59,44 @@
 	@include articleSet(rgba(11, 22, 25, 0.35), rgba(11, 22, 25, 0.33));
 }
 .empathy{
-	@include themeHeader(#f1f3ef, empathy1, #ced0c5);
-	@include articleSet(rgba(0, 0, 0, 0.75));
-	$link-color: #000;
-	footer {
-		a{
-			color: $link-color;
-			&:hover{
-				color: #673AB7;
-			}
-		}
-	}
 	h1 {
+		div{
+			text-shadow: 1px 1px 14px rgba(137, 113, 46, 0.15), -1px -1px 14px rgba(137, 113, 46, 0.15), -1px 1px 14px rgba(137, 113, 46, 0.15), 1px -1px 14px rgba(137, 113, 46, 0.15);
+		}
 		a {
 			div{
-				color: black;
+				color: rgb(123, 112, 73);
 			}
 		}
 	}
+	@include themeHeader(
+			rgb(87, 80, 67), 
+			empathy1
+		);
+	#hamburger > span{
+		&:after {
+			background-image: radial-gradient(rgb(233, 233, 223) 58%, transparent 92%);
+			transform: translate(-7px, -54px);
+		}
+		&:before {
+			background-image: radial-gradient(#000000 20%, transparent 73%);
+			opacity: 0.5;
+			transform: translate(-3px, -3px);
+		}
+		&:hover{
+			opacity: 0.65;
+			&:after{
+				background-image: radial-gradient(#f7f7f7 0%, transparent 84%);
+				transform: translate(-1px, -53px);
+			}
+			&:before{
+				opacity:0.3;
+				transform: translate(0px, -3px);
+			}
+		}
+	}
+	@include articleSet(rgba(87, 80, 67, 0.33), rgba(87, 80, 67, 0.5));
+	$link-color: #000;
 }
 .ecstasy{
 	@include themeHeader(#020202, ecstasy, rgb(147, 169, 190));
@@ -83,6 +111,5 @@
 	@include articleSet(rgba(74, 33, 26, 0.35), rgba(74, 33, 26, 0.33));
 }
 .true-romance{
-	@include themeHeader(rgb(95, 60, 31), true-romance, rgba(138, 89, 55, 0.85));
-	@include articleSet(rgba(95, 60, 31, 0.35), rgba(95, 60, 31, 0.33));
+	@include themeHeader(null, true-romance);
 }

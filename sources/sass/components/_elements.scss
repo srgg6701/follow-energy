@@ -45,6 +45,7 @@ div {
 }
 h1{
 	header &{
+		margin-bottom: -$hamburger-pseudo-offset;
 		margin-top: auto;
 	}
 }
