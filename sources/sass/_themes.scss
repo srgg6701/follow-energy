@@ -33,7 +33,6 @@
 }
 
 .what-is-energy {
-	//background-image: linear-gradient(to right, $color_vulcan_approx, $color_tangaroa_approx);
 	@include themeHeader(rgb(0,4,20), what-is-energy, $color_jaguar_75_approx);
 	@include articleSet(rgba(0,4,20, 0.35), rgba(0,4,20, 0.5));
 }
@@ -57,6 +56,14 @@
 .awakening {
 	@include themeHeader(#0b1619, awakening, #0b1619);
 	@include articleSet(rgba(11, 22, 25, 0.35), rgba(11, 22, 25, 0.33));
+}
+.beauty-of-infinite-life{
+	@include themeHeader(null, sunset-family-biggest);
+	#hamburger{
+		span{
+			opacity: 0.35;
+		}
+	}
 }
 .empathy{
 	h1 {
@@ -109,6 +116,15 @@
 .heroism{
 	@include themeHeader(rgb(74, 33, 26), heroism, rgb(74, 47, 30));
 	@include articleSet(rgba(74, 33, 26, 0.35), rgba(74, 33, 26, 0.33));
+}
+.sex{
+	@include themeHeader(rgb(0,0,0), intimate, #5b4a2c);
+	@include articleSet(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.33));
+	#hamburger{
+		span{
+			opacity: 0.75;
+		}
+	}
 }
 .true-romance{
 	@include themeHeader(null, true-romance);

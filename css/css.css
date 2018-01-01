@@ -140,6 +140,12 @@ main {
     box-shadow: 0 0 13px 0 rgba(11, 22, 25, 0.35);
     background: rgba(11, 22, 25, 0.33); }
 
+.beauty-of-infinite-life #page-background {
+  background-image: url(../images/sunset-family-biggest.jpg); }
+
+.beauty-of-infinite-life #hamburger span {
+  opacity: 0.35; }
+
 .empathy {
   background-color: #575043; }
   .empathy h1 div {
@@ -196,6 +202,18 @@ main {
   .heroism article section {
     box-shadow: 0 0 13px 0 rgba(74, 33, 26, 0.35);
     background: rgba(74, 33, 26, 0.33); }
+
+.sex {
+  background-color: black; }
+  .sex #page-background {
+    background-image: url(../images/intimate.jpg); }
+  .sex #hamburger > span:before {
+    background-image: radial-gradient(#5b4a2c 34%, transparent 70%); }
+  .sex article section {
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.33); }
+  .sex #hamburger span {
+    opacity: 0.75; }
 
 .true-romance #page-background {
   background-image: url(../images/true-romance.jpg); }
